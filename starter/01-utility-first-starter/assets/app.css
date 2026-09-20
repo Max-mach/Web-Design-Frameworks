@@ -6,8 +6,24 @@
     --font-sans: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --spacing: 0.25rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --color-paper: #f0eee3;
+    --color-ink: #16220e;
+    --color-link: #0b5c2a;
+    --color-ink-deep: #0a2107;
+    --color-on-dark: #f0eee3;
+    --color-lime: #d8f16b;
+    --color-on-light: #16220e;
+    --text-display: clamp(2.5rem, 1.6rem + 4vw, 5rem);
   }
 }
 @layer base {
@@ -159,8 +175,20 @@
   }
 }
 @layer utilities {
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .inline-block {
+    display: inline-block;
+  }
   .table {
     display: table;
+  }
+  .max-w-\[66ch\] {
+    max-width: 66ch;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -172,12 +200,127 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-\(length\:--rule\) {
+    border-style: var(--tw-border-style);
+    border-width: var(--rule);
+  }
+  .border-ink {
+    border-color: var(--color-ink);
+  }
+  .bg-ink-deep {
+    background-color: var(--color-ink-deep);
+  }
+  .bg-lime {
+    background-color: var(--color-lime);
+  }
+  .bg-paper {
+    background-color: var(--color-paper);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-display {
+    font-size: var(--text-display);
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+  .tracking-\[-0\.03em\] {
+    --tw-tracking: -0.03em;
+    letter-spacing: -0.03em;
+  }
+  .tracking-\[0\.08em\] {
+    --tw-tracking: 0.08em;
+    letter-spacing: 0.08em;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .text-wrap {
+    text-wrap: wrap;
+  }
+  .text-ink {
+    color: var(--color-ink);
+  }
+  .text-link {
+    color: var(--color-link);
+  }
+  .text-on-dark {
+    color: var(--color-on-dark);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .no-underline {
+    text-decoration-line: none;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .selection\:bg-lime ::selection {
+    background-color: var(--color-lime);
+  }
+  .selection\:bg-lime::selection {
+    background-color: var(--color-lime);
+  }
+  .selection\:text-on-light ::selection {
+    color: var(--color-on-light);
+  }
+  .selection\:text-on-light::selection {
+    color: var(--color-on-light);
+  }
+  .selection\:text-red-500 ::selection {
+    color: var(--color-red-500);
+  }
+  .selection\:text-red-500::selection {
+    color: var(--color-red-500);
+  }
+  @media (hover: hover) {
+    .hover\:bg-ink-deep:hover {
+      background-color: var(--color-ink-deep);
+    }
+    .hover\:text-on-dark:hover {
+      color: var(--color-on-dark);
+    }
   }
 }
 :root {
@@ -188,6 +331,18 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -197,6 +352,9 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-outline-style: solid;
     }
   }
