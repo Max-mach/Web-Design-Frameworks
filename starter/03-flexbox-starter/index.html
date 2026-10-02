@@ -23,18 +23,51 @@
          by block. That's what Flexbox is for. -->
 
     <header>
-      <div>
-        <a href="index.html">
-          <span aria-hidden="true"></span>
+      <div
+        class="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-5 py-4"
+      >
+        <a
+          class="flex items-center font-display text-xl font-black tracking-tight text-ink no-underline"
+          href="index.html"
+        >
+          <span
+            aria-hidden="true"
+            class="mr-2 size-3 rounded-full bg-green"
+          ></span>
           Compass
         </a>
-        <nav aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="find-support-services.html">Find support services</a>
-          <a href="student-stories.html">Student stories</a>
-          <a href="accommodations-faq.html">Accommodations FAQ</a>
-          <a href="events.html">Events &amp; drop-ins</a>
-          <a href="request-support.html">Request support</a>
+        <nav aria-label="Primary" class="contents">
+          <a
+            href="index.html"
+            aria-current="page"
+            class="py-1 text-base font-bold text-ink underline"
+            >Home</a
+          >
+          <a
+            href="find-support-services.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline"
+            >Find support services</a
+          >
+          <a
+            href="student-stories.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline"
+            >Student stories</a
+          >
+          <a
+            href="accommodations-faq.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline"
+            >Accommodations FAQ</a
+          >
+          <a
+            href="events.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline"
+            >Events &amp; drop-ins</a
+          >
+          <a
+            href="request-support.html"
+            class="ml-auto py-1 font-display text-base font-extrabold text-link no-underline hover:underline"
+            >Request support</a
+          >
         </nav>
       </div>
     </header>
@@ -47,7 +80,7 @@
            flex yet. -->
       <ul class="list-none border-t-(length:--rule) border-ink pl-0">
         <li
-          class="border-b-(length:--rule) border-ink bg-lime p-8 text-center text-on-light"
+          class="border-b-(length:--rule) border-ink bg-lime p-8 text-center text-on-light flex flex-col gap-4 items-center"
         >
           <svg
             class="h-14 w-14"
@@ -69,7 +102,7 @@
           <span class="font-display text-lg font-bold">Study skills</span>
         </li>
         <li
-          class="border-b-(length:--rule) border-ink bg-ink-deep p-8 text-center text-on-dark"
+          class="border-b-(length:--rule) border-ink bg-ink-deep p-8 text-center text-on-dark flex flex-col gap-4 items-center"
         >
           <svg
             class="h-14 w-14"
@@ -90,7 +123,7 @@
           >
         </li>
         <li
-          class="border-b-(length:--rule) border-ink bg-green p-8 text-center text-on-light"
+          class="border-b-(length:--rule) border-ink bg-green p-8 text-center text-on-light flex flex-col gap-4 items-center"
         >
           <svg
             class="h-14 w-14"
@@ -109,7 +142,7 @@
           <span class="font-display text-lg font-bold">Wellbeing</span>
         </li>
         <li
-          class="border-b-(length:--rule) border-ink bg-pink p-8 text-center text-on-light"
+          class="border-b-(length:--rule) border-ink bg-pink p-8 text-center text-on-light flex flex-col gap-4 items-center"
         >
           <svg
             class="h-14 w-14"
@@ -133,61 +166,117 @@
       <form aria-labelledby="filter-heading" method="get" action="#">
         <h2 id="filter-heading">Filter services</h2>
 
-        <div>
-          <fieldset>
-            <legend>Category</legend>
+        <div class="flex flex-wrap gap-4">
+          <fieldset
+            class="border-(length:--rule) border-t-4 border-ink border-t-green bg-paper px-4 pt-3 pb-4"
+          >
+            <legend
+              class="rounded-full bg-green px-3 py-1 font-display text-base font-bold text-on-light"
+            >
+              Category
+            </legend>
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="category" value="study-skills" />
               Study skills</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="category" value="assistive-tech" />
               Assistive technology</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="category" value="wellbeing" />
               Wellbeing</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="category" value="financial" />
               Financial</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal"
               ><input type="checkbox" name="category" value="social" /> Social
               &amp; peer</label
             >
           </fieldset>
 
-          <fieldset>
-            <legend>Format</legend>
+          <fieldset
+            class="border-(length:--rule) border-t-4 border-ink border-t-green bg-paper px-4 pt-3 pb-4"
+          >
+            <legend
+              class="rounded-full bg-green px-3 py-1 font-display text-base font-bold text-on-light"
+            >
+              Format
+            </legend>
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="format" value="in-person" /> In
               person</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="format" value="online" />
               Online</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal"
               ><input type="checkbox" name="format" value="email" />
               Email</label
             >
           </fieldset>
 
-          <fieldset>
-            <legend>Campus</legend>
+          <fieldset
+            class="border-(length:--rule) border-t-4 border-ink border-t-green bg-paper px-4 pt-3 pb-4"
+          >
+            <legend
+              class="rounded-full bg-green px-3 py-1 font-display text-base font-bold text-on-light"
+            >
+              Campus
+            </legend>
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="campus" value="city" /> City</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal mb-1"
               ><input type="checkbox" name="campus" value="riverside" />
               Riverside</label
             >
             <label
+              class="flex items-center gap-2 rounded-full border-(length:--rule) border-ink bg-paper px-3 py-1.5 font-normal"
               ><input type="checkbox" name="campus" value="online-only" />
               Online only</label
             >
           </fieldset>
+        </div>
+        <div class="flex flex-wrap gap-4 my-4 ml-10">
+          <div class="flex flex-col gap-1">
+            <h2 class="font-bold">Name</h2>
+            <p>Kaelen Vane</p>
+            <p>Mira Solis</p>
+            <p>Bram Calhoun</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h2 class="font-bold">Role</h2>
+            <p>Deep-sea archivist</p>
+            <p>High-altitude botanist</p>
+            <p>Foundry metallurgist</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h2 class="font-bold">Short details</h2>
+            <p class="max-w-55">
+              Keeps waterproof journals bound in cured sharkskin.
+            </p>
+            <p class="max-w-55">
+              Carries live moss inside the lining of her coat for warmth.
+            </p>
+            <p class="max-w-55">
+              Keeps a pocketful of chilled lead shot to test surface heats by
+              touch.
+            </p>
+          </div>
         </div>
       </form>
     </main>
@@ -196,14 +285,59 @@
          gap-x-*/gap-y-*. Nothing here has a class yet either. -->
     <footer>
       <nav aria-label="Footer">
-        <ul>
+        <ul class="flex flex-wrapp gap-x-4 gap-y-2 justify-center">
           <li>
-            <a href="find-support-services.html">Find support services</a>
+            <a
+              href="find-support-services.html"
+              class="text-base font-bold text-link no-underline hover:underline"
+              >Find support services</a
+            >
           </li>
-          <li><a href="accommodations-faq.html">Accommodations FAQ</a></li>
-          <li><a href="events.html">Events &amp; drop-ins</a></li>
-          <li><a href="request-support.html">Request support</a></li>
+          <li>
+            <a
+              href="accommodations-faq.html"
+              class="text-base font-bold text-link no-underline hover:underline"
+              >Accommodations FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="events.html"
+              class="text-base font-bold text-link no-underline hover:underline"
+              >Events &amp; drop-ins</a
+            >
+          </li>
+          <li>
+            <a
+              href="request-support.html"
+              class="text-base font-bold text-link no-underline hover:underline"
+              >Request support</a
+            >
+          </li>
         </ul>
+        <div class="flex flex-col gap-3 justify-center py-10 items-center">
+          <ul class="flex justify-center gap-5">
+            <li>
+              <a href="" class="no-underline hover:underline"
+                >Conditions of Use & Sale</a
+              >
+            </li>
+            <li>
+              <a href="" class="no-underline hover:underline">Legal Notice</a>
+            </li>
+            <li>
+              <a href="" class="no-underline hover:underline">Cookies Notice</a>
+            </li>
+            <li>
+              <a href="" class="no-underline hover:underline"
+                >Interest-Based Ads Notice</a
+              >
+            </li>
+          </ul>
+          <a class="text-center"
+            >© 1996-2026, Amazon.com, Inc. or its affiliates</a
+          >
+        </div>
       </nav>
     </footer>
   </body>
