@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - My App</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Hanken+Grotesk:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/app.css" />
     <!-- update to your compiled css link if starter uses tailwind/vite -->
   </head>
-  <body class="min-h-screen flex flex-col justify-between">
+  <body class="min-h-screen">
     <!-- Shared Header -->
-    <header
-      class="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-    >
-      <div class="text-xl font-bold">My App</div>
-      <nav class="flex flex-col gap-2">
+    <header>
+      <h1 class="text-xl font-bold">My App</h1>
+      <nav class="flex gap-2">
         <a href="./index.html" class="font-semibold">Home</a>
         <a href="./how-it-works.html">How It Works</a>
         <a href="./process.html">Process</a>
@@ -23,6 +28,7 @@
     <!-- Main Content -->
     <main class="p-6">
       <h1 class="text-3xl font-bold">Process</h1>
+      <p class="hidden sm:max-lg:block mt-4 p-3">Visible</p>
     </main>
 
     <!-- Shared Footer -->
