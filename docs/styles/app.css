@@ -4,6 +4,7 @@
 /* Your site's design tokens go in an @theme block here, from your own Figma
    variables. That is week 7. Until then this file only imports Tailwind. */
 @theme {
+  --breakpoint-xs: 30rem;
   --color-deep-blue: #001830;
   --color-main-grey: #f7f6fb;
   --color-main-blue: #19303d;
@@ -16,7 +17,6 @@
 
   --font-serif: "Petrona", ui-sans-serif, system-ui, sans-serif;
 
-  --space-1: clamp(0.5rem, 0.4744rem + 0.1136vw, 0.5625rem); /*8px to 9px */
   --space-2: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem); /*12px to 14px */
   --space-3: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem); /*16px to 18px */
   --space-6: clamp(1.5rem, 1.4233rem + 0.3409vw, 1.6875rem); /*24px to 27px */
@@ -24,4 +24,23 @@
   --space-12: clamp(2.5rem, 2.3722rem + 0.5682vw, 2.8125rem); /*40px to 45px */
   --space-16: clamp(3rem, 2.8466rem + 0.6818vw, 3.375rem); /*48px to 54px */
   --space-24: clamp(4rem, 3.7955rem + 0.9091vw, 4.5rem); /*64px to 72px */
+
+  --step-default: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+  --step-h3: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
+  --step-h2: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+  --step-h1: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
+}
+@layer base {
+  body {
+    font-size: var(--step-default);
+  }
+  h1 {
+    font-size: var(--step-h1);
+  }
+  h2 {
+    font-size: var(--step-h2);
+  }
+  h3 {
+    font-size: var(--step-h3);
+  }
 }
