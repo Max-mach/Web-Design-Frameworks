@@ -1,4 +1,4 @@
-@import url("https://googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 /* Your site's design tokens go in an @theme block here, from your own Figma
@@ -15,7 +15,7 @@
   --color-dark-green: #042f35;
   --color-star-yellow: #fab326;
 
-  --font-serif: "Petrona", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --space-2: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem); /*12px to 14px */
   --space-3: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem); /*16px to 18px */
@@ -36,11 +36,14 @@
   }
   h1 {
     font-size: var(--step-h1);
+    font-family: "Petrona", var(--font-serif);
   }
   h2 {
     font-size: var(--step-h2);
+    font-family: "Petrona", var(--font-serif);
   }
   h3 {
     font-size: var(--step-h3);
+    font-family: "Petrona", var(--font-serif);
   }
 }

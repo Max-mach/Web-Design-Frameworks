@@ -1,5 +1,5 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
-@import url("https://googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,7 +7,7 @@
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
       "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: "Petrona", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
@@ -263,12 +263,15 @@
   }
   h1 {
     font-size: var(--step-h1);
+    font-family: "Petrona", var(--font-serif);
   }
   h2 {
     font-size: var(--step-h2);
+    font-family: "Petrona", var(--font-serif);
   }
   h3 {
     font-size: var(--step-h3);
+    font-family: "Petrona", var(--font-serif);
   }
 }
 @property --tw-font-weight {
