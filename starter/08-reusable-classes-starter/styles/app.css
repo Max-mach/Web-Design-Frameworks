@@ -63,3 +63,13 @@
     @apply inline-block font-bold text-link decoration-[0.1em] underline-offset-[0.2em] transition-[text-decoration-thickness] duration-120 group-focus-within:decoration-[0.18em] group-hover:decoration-[0.18em] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link;
   }
 }
+
+@utility border-rule {
+  border: var(--rule) solid var(--color-ink);
+}
+@utility border-rule-2 {
+  border: calc(var(--rule) * 2) solid var(--color-ink);
+}
+@utility border-rule-3 {
+  border: calc(var(--rule) * 3) solid var(--color-ink);
+}
