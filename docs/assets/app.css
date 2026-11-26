@@ -16,10 +16,8 @@
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-deep-blue: #001830;
-    --color-text-white: #fefefc;
-    --color-brown: #8f7f6f;
-    --color-button-br: #26211d;
+    --color-bg-grey: #f5f5f5;
+    --color-text-white: #f4f4f5;
     --step-default: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
     --step-h3: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
     --step-h2: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
@@ -205,8 +203,8 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
-  .bg-button-br {
-    background-color: var(--color-button-br);
+  .bg-bg-grey {
+    background-color: var(--color-bg-grey);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -239,12 +237,6 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .text-brown {
-    color: var(--color-brown);
-  }
-  .text-deep-blue {
-    color: var(--color-deep-blue);
   }
   .text-text-white {
     color: var(--color-text-white);

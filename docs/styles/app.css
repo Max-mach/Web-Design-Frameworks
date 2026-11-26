@@ -5,15 +5,21 @@
    variables. That is week 7. Until then this file only imports Tailwind. */
 @theme {
   --breakpoint-xs: 30rem;
-  --color-deep-blue: #001830;
-  --color-main-grey: #f7f6fb;
-  --color-main-blue: #19303d;
-  --color-text-white: #fefefc;
-  --color-back-white: #f4f4f2;
-  --color-brown: #8f7f6f;
-  --color-button-br: #26211d;
-  --color-dark-green: #042f35;
-  --color-star-yellow: #fab326;
+  /* ___ */
+  --color-bg-grey: #f5f5f5;
+  --color-text: #000000;
+  --color-bg-nav-blue: #233645;
+  --color-border-grey: #525252;
+  --color-button-orange: #ff7300;
+  --color-bg-header-blue: #233645;
+  --color-bg-header-green: #24464d;
+  --color-bg-header-white: #fdfcfc;
+  --color-text-white: #f4f4f5;
+  --color-button-blue: #020f61;
+  --color-bg-image: #eae9e7;
+  --color-text-grey: #676262;
+
+  /* ___ */
 
   --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
 
@@ -30,6 +36,13 @@
   --step-h2: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
   --step-h1: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
 }
+
+[data-theme="dark"] {
+  --color-bg-grey: #121316;
+  --color-bg-header-white: #2a2d35;
+  --color-text: #f4f4f5;
+}
+
 @layer base {
   body {
     font-size: var(--step-default);
