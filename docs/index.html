@@ -14,31 +14,55 @@
     <link rel="stylesheet" href="assets/app.css" />
     <!-- update to your compiled css link if starter uses tailwind/vite -->
   </head>
-  <body class="min-h-screen font-serif bg-bg-grey">
+  <body class="min-h-screen font-serif bg-bg-grey mx-[clamp(3px,5vw,64px)]">
     <!-- Shared Header -->
-    <header>
-      <h1 class="text-display font-bold">My App</h1>
-      <nav class="flex gap-2">
-        <a href="./index.html" class="font-semibold">Home</a>
-        <a href="./how-it-works.html">How It Works</a>
-        <a href="./process.html">Process</a>
-      </nav>
+    <header
+      class="flex items-center justify-between w-full h-20 px-8 border rounded-full mt-2.5"
+    >
+      <div class="flex items-center gap-14">
+        <h2 class="font-bold">Morrow</h2>
+        <nav class="flex gap-6">
+          <a href="./index.html" class="font-semibold text-bg-header-blue"
+            >Home</a
+          >
+          <a href="./how-it-works.html">Furniture</a>
+          <a href="./process.html">Shop</a>
+        </nav>
+      </div>
+      <a
+        href=""
+        class="px-10 py-2 text-white bg-button-orange rounded-lg hover:bg-amber-700"
+      >
+        Download App
+      </a>
     </header>
 
     <!-- Main Content -->
-    <main class="pt-6 pl-2">
-      <div class="p-8 flex flex-col items-start gap-2">
-        <h3 class="text-brown">New release</h3>
-        <h1 class="text-deep-blue">Swivel Lounge Chair</h1>
-        <p class="text-deep-blue">
-          House Nordic is a Danish brand with passion for furniture and interior
-          products
-        </p>
-        <button
-          class="bg-button-br text-text-white px-6 py-3 rounded-2xl mt-2 cursor-pointer"
+    <main>
+      <div class="w-full h-108 bg-bg-header-blue mt-3 rounded-2xl flex gap-30">
+        <div
+          class="flex-1 flex items-center justify-center text-text-white pl-16"
         >
-          Delivery & Returns
-        </button>
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+              <p class="font-petrona">New arrivals</p>
+              <h1 class="">Crafted Comfort Timeless Style</h1>
+              <p>
+                Discover sculptural furniture design to bring warmth and calm
+                spaces
+              </p>
+            </div>
+            <div class="flex gap-8">
+              <img class="max-w-40" src="./images/apple.png" alt="apple" />
+              <img class="max-w-40" src="./images/apple.png" alt="apple" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-1 flex items-center justify-center h-full bg-bg-header-green"
+        >
+          <img src="./images/phone.png" alt="phone" />
+        </div>
       </div>
     </main>
 

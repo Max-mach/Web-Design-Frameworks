@@ -20,6 +20,7 @@
   --color-text-grey: #676262;
 
   /* ___ */
+  --font-petrona: "Petrona", "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
 
@@ -34,7 +35,7 @@
   --step-default: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
   --step-h3: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
   --step-h2: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
-  --step-h1: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
+  --step-h1: clamp(2rem, 1.4375rem + 2.5vw, 3.375rem);
 }
 
 [data-theme="dark"] {
@@ -49,14 +50,14 @@
   }
   h1 {
     font-size: var(--step-h1);
-    font-family: "Petrona", var(--font-serif);
+    font-family: var(--font-petrona);
   }
   h2 {
     font-size: var(--step-h2);
-    font-family: "Petrona", var(--font-serif);
+    font-family: var(--font-petrona);
   }
   h3 {
     font-size: var(--step-h3);
-    font-family: "Petrona", var(--font-serif);
+    font-family: var(--font-petrona);
   }
 }
