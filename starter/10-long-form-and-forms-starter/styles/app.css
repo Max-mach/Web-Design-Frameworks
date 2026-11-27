@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Dark mode: the dark variant follows data-theme on <html>, not the OS setting. */
 @custom-variant dark ([data-theme="dark"] &);
