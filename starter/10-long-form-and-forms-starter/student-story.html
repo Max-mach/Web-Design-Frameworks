@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-IE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Week 10 starter: a student story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Hanken+Grotesk:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Set the theme before the page is painted, so there is no flash.
+      // Light is the default. If localStorage is blocked, stay light.
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          saved === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <body class="bg-paper font-sans leading-relaxed text-ink">
+    <!-- Week 10 starter. The week 9 page, unchanged: the [data-theme="dark"] token values in styles/app.css, the toggle in the header, the script in the head, and assets/theme.js. Compass's dark mode is in reference/. The button is this course's own btn, as in week 8, so this is not a literal extract of Compass. -->
+    <header class="border-b-(length:--rule) border-ink bg-paper">
+      <div
+        class="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-5 py-4"
+      >
+        <a
+          href="index.html"
+          class="flex items-center font-display text-xl font-black tracking-tight text-ink no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link"
+        >
+          <span
+            aria-hidden="true"
+            class="mr-2 size-3 rounded-full bg-green"
+          ></span>
+          Compass
+        </a>
+        <nav aria-label="Primary" class="contents">
+          <a
+            href="index.html"
+            aria-current="false"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline hover:decoration-green hover:decoration-[0.15em] hover:underline-offset-[0.2em] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link aria-[current=page]:underline aria-[current=page]:decoration-ink aria-[current=page]:decoration-[0.15em] aria-[current=page]:underline-offset-[0.2em]"
+            >Home</a
+          >
+          <a
+            href="find-support-services.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline hover:decoration-green hover:decoration-[0.15em] hover:underline-offset-[0.2em] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link aria-[current=page]:underline aria-[current=page]:decoration-ink aria-[current=page]:decoration-[0.15em] aria-[current=page]:underline-offset-[0.2em]"
+            >Find support services</a
+          >
+          <a
+            href="events.html"
+            class="py-1 text-base font-bold text-ink no-underline hover:underline hover:decoration-green hover:decoration-[0.15em] hover:underline-offset-[0.2em] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link aria-[current=page]:underline aria-[current=page]:decoration-ink aria-[current=page]:decoration-[0.15em] aria-[current=page]:underline-offset-[0.2em]"
+            >Events &amp; drop-ins</a
+          >
+          <a
+            href="request-support.html"
+            class="ml-auto py-1 font-display text-base font-extrabold text-link no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link"
+            >Request support</a
+          >
+        </nav>
+        <button
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          class="btn"
+        >
+          Dark mode
+        </button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-5 py-12">
+      <article class="max-w-[65ch]">
+        <h1
+          class="font-display text-h2 leading-none font-extrabold tracking-[-0.02em]"
+        >
+          Aoife&rsquo;s story
+        </h1>
+        <p class="mt-4 text-lg font-bold text-link">Second-year Psychology</p>
+
+        <p class="mt-6 text-lg leading-relaxed">
+          I was diagnosed with ADHD at the end of first year, which felt very
+          late until I met about six other people the same term who had the same
+          story. Before that, I had spent a year assuming everyone found
+          deadlines this hard and just complained about it less.
+        </p>
+
+        <p class="mt-6 text-lg leading-relaxed">
+          The first thing I did was nothing. I sat on the diagnosis for a month
+          because booking an appointment meant admitting I needed one. What
+          finally moved me was a Tuesday drop-in, no appointment, no form, you
+          just turn up. I told myself I was only going to ask a question.
+        </p>
+
+        <h2 class="mt-12 font-display text-h2 leading-tight font-extrabold">
+          What changed
+        </h2>
+
+        <p class="mt-6 text-lg leading-relaxed">
+          The adviser did not lead with accommodations. She asked how I actually
+          worked, and we spent most of the time on the gap between starting a
+          task and being able to start a task. The practical things came out of
+          that conversation rather than from a checklist:
+        </p>
+
+        <ul class="mt-6 list-disc space-y-3 pl-6 text-lg leading-relaxed">
+          <li>
+            Coursework extensions I could request without explaining myself each
+            time.
+          </li>
+          <li>
+            A reader-writer for exams, once we worked out that reading under
+            time pressure was where I lost most marks.
+          </li>
+          <li>
+            Lecture recordings, so missing five minutes did not mean missing the
+            thread for the rest of the hour.
+          </li>
+          <li>
+            The co-working room on Riverside campus, which turned out to matter
+            more than any of the formal accommodations.
+          </li>
+        </ul>
+
+        <p class="mt-6 text-lg leading-relaxed">
+          The co-working room is just a room with other people working in it.
+          For reasons I have stopped trying to explain, I can work there for
+          three hours and barely notice. On my own I lose the first two hours to
+          my phone.
+        </p>
+
+        <blockquote
+          class="mt-8 border-l-4 border-green bg-lime px-5 py-4 font-display text-xl font-bold text-on-light"
+        >
+          I thought asking for help meant I was behind. It turned out to be the
+          thing that let me catch up.
+        </blockquote>
+
+        <h2 class="mt-12 font-display text-h2 leading-tight font-extrabold">
+          If you are putting it off
+        </h2>
+
+        <p class="mt-6 text-lg leading-relaxed">
+          Go to a drop-in and treat it as reconnaissance. You do not have to
+          decide anything or accept anything. I brought one question and left
+          with a plan I did not know was available, and the whole thing took
+          about twenty minutes.
+        </p>
+      </article>
+    </main>
+    <script src="assets/theme.js" defer></script>
+  </body>
+</html>

@@ -14,14 +14,30 @@
     <link rel="stylesheet" href="assets/app.css" />
     <!-- update to your compiled css link if starter uses tailwind/vite -->
   </head>
-  <body class="min-h-screen font-serif bg-bg-grey mx-[clamp(3px,5vw,64px)]">
+  <body class="min-h-screen font-serif bg-bg-grey max-lg:mx-4 lg:mx-16">
     <!-- Shared Header -->
     <header
       class="flex items-center justify-between w-full h-20 px-8 border rounded-full mt-2.5"
     >
       <div class="flex items-center gap-14">
-        <h2 class="font-bold">Morrow</h2>
-        <nav class="flex gap-6">
+        <div class="flex gap-3 items-center">
+          <button class="md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="23"
+              viewBox="0 0 33 23"
+              fill="none"
+            >
+              <path
+                d="M0.70997 7.00064e-05C0.617211 -0.00124183 0.525117 0.0158948 0.43904 0.0504844C0.352962 0.085074 0.274617 0.136427 0.208558 0.201558C0.1425 0.266689 0.0900442 0.3443 0.0542408 0.42988C0.0184374 0.51546 0 0.607302 0 0.70007C0 0.792838 0.0184374 0.88468 0.0542408 0.97026C0.0900442 1.05584 0.1425 1.13345 0.208558 1.19858C0.274617 1.26371 0.352962 1.31507 0.43904 1.34966C0.525117 1.38425 0.617211 1.40138 0.70997 1.40007H31.51C31.6027 1.40138 31.6948 1.38425 31.7809 1.34966C31.867 1.31507 31.9453 1.26371 32.0114 1.19858C32.0774 1.13345 32.1299 1.05584 32.1657 0.97026C32.2015 0.88468 32.2199 0.792838 32.2199 0.70007C32.2199 0.607302 32.2015 0.51546 32.1657 0.42988C32.1299 0.3443 32.0774 0.266689 32.0114 0.201558C31.9453 0.136427 31.867 0.085074 31.7809 0.0504844C31.6948 0.0158948 31.6027 -0.00124183 31.51 7.00064e-05H0.70997ZM0.70997 10.5001C0.617211 10.4988 0.525117 10.5159 0.43904 10.5505C0.352962 10.5851 0.274617 10.6364 0.208558 10.7016C0.1425 10.7667 0.0900442 10.8443 0.0542408 10.9299C0.0184374 11.0155 0 11.1073 0 11.2001C0 11.2928 0.0184374 11.3847 0.0542408 11.4703C0.0900442 11.5558 0.1425 11.6335 0.208558 11.6986C0.274617 11.7637 0.352962 11.8151 0.43904 11.8497C0.525117 11.8842 0.617211 11.9014 0.70997 11.9001H31.51C31.6027 11.9014 31.6948 11.8842 31.7809 11.8497C31.867 11.8151 31.9453 11.7637 32.0114 11.6986C32.0774 11.6335 32.1299 11.5558 32.1657 11.4703C32.2015 11.3847 32.2199 11.2928 32.2199 11.2001C32.2199 11.1073 32.2015 11.0155 32.1657 10.9299C32.1299 10.8443 32.0774 10.7667 32.0114 10.7016C31.9453 10.6364 31.867 10.5851 31.7809 10.5505C31.6948 10.5159 31.6027 10.4988 31.51 10.5001H0.70997ZM0.70997 21.0001C0.617211 20.9988 0.525117 21.0159 0.43904 21.0505C0.352962 21.0851 0.274617 21.1364 0.208558 21.2016C0.1425 21.2667 0.0900442 21.3443 0.0542408 21.4299C0.0184374 21.5155 0 21.6073 0 21.7001C0 21.7928 0.0184374 21.8847 0.0542408 21.9703C0.0900442 22.0558 0.1425 22.1334 0.208558 22.1986C0.274617 22.2637 0.352962 22.3151 0.43904 22.3497C0.525117 22.3842 0.617211 22.4014 0.70997 22.4001H31.51C31.6027 22.4014 31.6948 22.3842 31.7809 22.3497C31.867 22.3151 31.9453 22.2637 32.0114 22.1986C32.0774 22.1334 32.1299 22.0558 32.1657 21.9703C32.2015 21.8847 32.2199 21.7928 32.2199 21.7001C32.2199 21.6073 32.2015 21.5155 32.1657 21.4299C32.1299 21.3443 32.0774 21.2667 32.0114 21.2016C31.9453 21.1364 31.867 21.0851 31.7809 21.0505C31.6948 21.0159 31.6027 20.9988 31.51 21.0001H0.70997Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <h2 class="font-bold">Morrow</h2>
+        </div>
+        <nav class="md:flex gap-6 hidden">
           <a href="./index.html" class="font-semibold text-bg-header-blue"
             >Home</a
           >
@@ -31,7 +47,7 @@
       </div>
       <a
         href=""
-        class="px-10 py-2 text-white bg-button-orange rounded-lg hover:bg-amber-700"
+        class="px-2 md:px-10 py-2 text-white bg-button-orange rounded-lg hover:bg-amber-700"
       >
         Download App
       </a>
@@ -39,30 +55,99 @@
 
     <!-- Main Content -->
     <main>
-      <div class="w-full h-108 bg-bg-header-blue mt-3 rounded-2xl flex gap-30">
+      <div
+        class="w-full md:h-108 bg-bg-header-blue mt-3 rounded-2xl flex flex-col md:flex-row gap-8 md:gap-30 overflow-hidden"
+      >
         <div
-          class="flex-1 flex items-center justify-center text-text-white pl-16"
+          class="flex-1 flex items-center justify-center text-text-white p-8"
         >
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <p class="font-petrona">New arrivals</p>
-              <h1 class="">Crafted Comfort Timeless Style</h1>
+              <h1>Crafted Comfort Timeless Style</h1>
               <p>
                 Discover sculptural furniture design to bring warmth and calm
                 spaces
               </p>
             </div>
-            <div class="flex gap-8">
-              <img class="max-w-40" src="./images/apple.png" alt="apple" />
-              <img class="max-w-40" src="./images/apple.png" alt="apple" />
+            <div class="flex gap-4 md:gap-8">
+              <img
+                class="max-w-36 md:max-w-40"
+                src="./images/apple.png"
+                alt="apple"
+              />
+              <img
+                class="max-w-36 md:max-w-40"
+                src="./images/apple.png"
+                alt="apple"
+              />
             </div>
           </div>
         </div>
         <div
-          class="flex-1 flex items-center justify-center h-full bg-bg-header-green"
+          class="flex-1 flex items-center justify-center py-8 md:py-0 md:h-full bg-bg-header-green rounded-2xl"
         >
           <img src="./images/phone.png" alt="phone" />
         </div>
+      </div>
+      <div class="md:mt-14">
+        <div class="block md:flex justify-between">
+          <div class="md:ml-6">
+            <h2 class="text-center md:text-left">Curate & Discover</h2>
+            <p class="font-semibold">30M+</p>
+            <div class="flex md:block justify-between">
+              <p>Unique product</p>
+              <p class="underline">All categories</p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mt-2 flex flex-wrap justify-self-center md:items-start gap-2"
+            >
+              <a
+                href=""
+                class="text-text-white bg-button-blue px-5.5 py-2 rounded-full"
+                >All</a
+              >
+              <a href="" class="button-border">Living Room</a>
+              <a href="" class="button-border">Bedroom</a>
+              <a href="" class="button-border">Office</a>
+              <a href="" class="button-border hidden md:block">Washroom</a>
+              <a href="" class="button-border hidden md:block">Kitchen</a>
+            </div>
+            <div
+              class="grid grid-cols-2 gap-4 mt-4 md:flex md:flex-row md:mt-3 md:gap-12"
+            >
+              <div class="image-orders">
+                <img
+                  src="./images/chair.png"
+                  alt="chair"
+                  class="self-center mb-auto"
+                />
+                <p>Dining Chair</p>
+              </div>
+              <div class="image-orders">
+                <img
+                  src="./images/sofa.png"
+                  alt="sofa"
+                  class="self-center mb-auto"
+                />
+                <p>Sofas</p>
+              </div>
+              <div class="image-orders">
+                <img
+                  src="./images/table.png"
+                  alt="table"
+                  class="self-center mb-auto"
+                />
+                <p>Tables</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Discover Our Products</h2>
       </div>
     </main>
 

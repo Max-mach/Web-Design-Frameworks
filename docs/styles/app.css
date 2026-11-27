@@ -24,13 +24,44 @@
 
   --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --space-2: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem); /*12px to 14px */
-  --space-3: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem); /*16px to 18px */
-  --space-6: clamp(1.5rem, 1.4233rem + 0.3409vw, 1.6875rem); /*24px to 27px */
-  --space-8: clamp(2rem, 1.8977rem + 0.4545vw, 2.25rem); /*32px to 36px */
-  --space-12: clamp(2.5rem, 2.3722rem + 0.5682vw, 2.8125rem); /*40px to 45px */
-  --space-16: clamp(3rem, 2.8466rem + 0.6818vw, 3.375rem); /*48px to 54px */
-  --space-24: clamp(4rem, 3.7955rem + 0.9091vw, 4.5rem); /*64px to 72px */
+  --spacing-2: clamp(0.5rem, 0.4489rem + 0.2273vw, 0.625rem); /* 8px to 10px */
+  --spacing-3: clamp(
+    0.75rem,
+    0.6989rem + 0.2273vw,
+    0.875rem
+  ); /* 12px to 14px */
+  --spacing-4: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem); /* 16px to 18px */
+  --spacing-6: clamp(
+    1.5rem,
+    1.4233rem + 0.3409vw,
+    1.6875rem
+  ); /* 24px to 27px */
+  --spacing-8: clamp(2rem, 1.8977rem + 0.4545vw, 2.25rem); /* 32px to 36px */
+  --spacing-10: clamp(
+    2.5rem,
+    2.3722rem + 0.5682vw,
+    2.8125rem
+  ); /* 40px to 45px */
+  --spacing-12: clamp(3rem, 2.8466rem + 0.6818vw, 3.375rem); /* 48px to 54px */
+  --spacing-16: clamp(4rem, 3.7955rem + 0.9091vw, 4.5rem); /* 64px to 72px */
+  --spacing-20: clamp(5rem, 4.7443rem + 1.1364vw, 5.625rem); /* 80px to 90px */
+  --spacing-24: clamp(6rem, 5.6932rem + 1.3636vw, 6.75rem); /* 96px to 108px */
+  --spacing-28: clamp(7rem, 6.642rem + 1.5909vw, 7.875rem); /* 112px to 126px */
+  --spacing-36: clamp(
+    9rem,
+    8.5398rem + 2.0455vw,
+    10.125rem
+  ); /* 144px to 162px */
+  --spacing-44: clamp(
+    11rem,
+    10.4375rem + 2.5vw,
+    12.375rem
+  ); /* 176px to 198px */
+  --spacing-56: clamp(
+    14rem,
+    13.2841rem + 3.1818vw,
+    15.75rem
+  ); /* 224px to 252px */
 
   --step-default: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
   --step-h3: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
@@ -59,5 +90,22 @@
   h3 {
     font-size: var(--step-h3);
     font-family: var(--font-petrona);
+  }
+}
+@layer components {
+  .button-border {
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 1px solid var(--color-border-grey);
+    border-radius: 28px;
+  }
+  .image-orders {
+    /* w-42 rouned-sm bg-bg-image flex flex-col items-center justify-center */
+    width: 171px;
+    height: 165px;
+    padding: var(--spacing-2);
+    border-radius: 4px;
+    background-color: var(--color-bg-image);
+    display: flex;
+    flex-direction: column;
   }
 }
